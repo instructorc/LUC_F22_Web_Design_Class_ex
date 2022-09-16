@@ -12,6 +12,16 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <!--Internal CSS-->
         <style>
+
+            @font-face {
+            font-family: 'calibril';
+            src: url('./font/calibril.eot'); /* IE9 Compat Modes */
+            src: url('./font/calibril.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./font/calibril.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./font/calibril.woff') format('woff'), /* Pretty Modern Browsers */
+                url('./font/calibril.ttf')  format('truetype'), /* Safari, Android, iOS */
+                url('./font/calibril.svg#svgFontName') format('svg'); /* Legacy iOS */
+            }
             html, body, div, span, object, iframe,
             h1, h2, h3, h4, h5, h6, p, blockquote, pre,
             abbr, address, cite, code,
@@ -37,6 +47,7 @@
 
             body {
                 line-height:1;
+                font-family: 'calibril', Arial, Helvetica, sans-serif;
             }
 
             #container{
@@ -45,10 +56,12 @@
             }
             h1{
                 font-size: 1.4em;
+                line-height: 1.2em;
             }
             h2{
                 font-size: 1em;
-                font-weight: 100
+                font-weight: 100;
+                line-height: 1.6em;
             }
 
             header{
@@ -56,10 +69,52 @@
                 margin-bottom: 30px;
             }
 
+            img[src="img/filestructure.png"]{
+                display: block;
+                margin: auto;
+                margin-top: 15px;
+            }
+            hr {
+                background-color: black;
+            }
+            ol {
+
+                margin-top: 13px;
+                margin-left: 28px;
+            }
+            li {
+                line-height: 2.2em;
+
+            }
+            input[type="text"] {
+                border: none;
+                border-bottom: 1px solid black;
+                margin-left: 12px;
+            }
+            input:focus{
+                outline: none;
+            }
+
+            img[src="img/itworksheets_logo.png"] {
+                width: 300px;
+                margin-top: 28px;
+                float: right;
+            }
+
+            footer {
+                height: 100px;
+                width: 100%;
+                background-color: #c6c6c6;
+            }
+
             
         </style>
         <!--Internal JavaScript-->
         <script></script>
+        <!--Google Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     </head>
     <body><!--Everything that gets visually rendered-->
         <div id="container">
@@ -70,7 +125,7 @@
             </header>
             <p style="font-weight: bold;">Directions: This assignment will focus on understanding relative and absolute file paths. Please use the diagram below to fill
                 in the correct file path for each of the 5 questions below. </p>
-            <a href="https://www.w3schools.com/tags/att_input_maxlength.asp"><img src="img/filestructure.png" alt="Picture of File Structure"/></a>
+            <a href="https://www.w3schools.com/tags/att_input_maxlength.asp"><img src="img/filestructure.png" id="filestructure" alt="Picture of File Structure"/></a>
             <hr>
             <ol>
                 <li>What is the relative file path to bg.jpg file from index.html file? <input type="text" size="35">   </li>
