@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+       <head>
+		<!--The head tag communicates information about the html document -->
+		<title>CSS Flexbox </title>
+        <!--Internal CSS-->
+        <style>
+            #container{
+                display: flex;
+                flex-wrap:wrap;
+                width: 80%;
+                margin: auto;
+                border: 3px solid orangered;
+                flex-direction: row-reverse;
+            }
+
+            .boxes{
+                border: 3px solid green;
+                margin:10px;
+                height: 325px;
+                flex: 1 0 250px;
+            }
+        </style>
+	</head>
+	<body>
+        <!--Apply a 3px solid orangedred border 
+            to the container and a 3px solid green border 
+            to the immediate children of the container.
+            Create flex items of all the immediate children 
+            of the container. Each aside box element should 
+            have a flex-grow of 1, a flex-shrink of 0 and 
+            flex basis of auto and a height of 325px. 
+            Apply 10px of margin around each flex item.-->
+        <div id="container">
+            <aside class="boxes"> #1 </aside>
+            <aside class="boxes"> #2 </aside>
+            <aside class="boxes"> #3 </aside>
+            <aside class="boxes"> #4 </aside>
+            <aside class="boxes"> #5 </aside>
+            <aside class="boxes"> #6 </aside>
+        </div>
+	</body>
+</html>

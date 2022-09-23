@@ -5,6 +5,11 @@
 		<title>Basic Structure </title>
         <!--Internal CSS-->
         <style>
+            #container{
+                width: 900px;
+                margin: auto;
+
+            }
             .boxes{
                 width: 250px;
                 height: 250px;
@@ -12,12 +17,46 @@
                 border: 10px solid #333;
                 margin: 12px;
                 background-color: #BDD358;
+                color: white;
+                text-align: center;
+                font-size: 4em;
+                padding-top: 14%;
+                float: left;
+            }
+            #header{
+                width: 100%;
+                height: 120px;
+                clear: both;
+                border-radius: 14px;
+                border: 10px solid #333;
+                margin: 12px;
+                background-color: #BDD358;
+                color: white;
+                text-align: center;
+                font-size: 4em;
+            }
+
+            #footer{
+                width: 100%;
+                height: 120px;
+                clear: both;
+                border-radius: 14px;
+                border: 10px solid #333;
+                margin: 12px;
+                background-color: #BDD358;
+                color: white;
+                text-align: center;
+                font-size: 4em;
             }
         </style>
 	</head>
 	<body>
-		<div class="boxes"> #1 </div>
-		<div class="boxes"> #2 </div>
-		<div class="boxes"> #3 </div>
+        <div id="container">
+            <header id="header"></header>
+            <div class="boxes"> #1 </div>
+            <div class="boxes"> #2 </div>
+            <div class="boxes"> #3 </div>
+            <footer id="footer"></footer>
+        </div>
 	</body>
 </html>
