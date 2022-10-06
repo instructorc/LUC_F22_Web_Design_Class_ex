@@ -6,9 +6,25 @@
         <!--Internal CSS-->
         <style>
             #container{
-                
-               
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 100px 2fr repeat(2, minmax(100px, 1fr));
+                grid-template-areas: ". . . ." 
+                                    "item1 . . ." 
+                                    "item1 item2 item2 item2" 
+                                    " . item2 item2 item2";
+                width: 900px;
+                margin: auto;
             }
+            #item1{
+                grid-area: item1;
+            background-color: red;
+        }
+
+        #item2{
+            grid-area: item2;
+            background-color: red;
+        }
 
 
         </style>
@@ -16,7 +32,8 @@
 	<body>
 
         <div id="container">
-            <aside class="boxes"> #1 </aside>
+            <aside id="item1"> #1 </aside>
+            <aside id="item2"> #1 </aside>
 
         </div>
 	</body>
