@@ -1,4 +1,4 @@
-<!--C. Fulton 9/1/2022-->
+<!--C. Fulton 10/6/2022-->
 <!DOCTYPE html><!--Tells the browser the version + standards-->
 <html lang="en"><!--Root-->
     <head> <!--Contains all of the metadata Info. About the document-->
@@ -40,10 +40,14 @@
                 background-color: #f5f5f5;
                 font-family: 'Roboto', sans-serif;
                 line-height:1;
-                font-family: 'calibril', Arial, Helvetica, sans-serif;
+
             }
 
             #container{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 95px 1fr auto 65px;
+                grid-gap: 10px;
                 width: 85vw;
                 height: 100vh;
                 margin: auto;
@@ -53,10 +57,39 @@
 
             header{
                 border: 1px solid green;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+            #banner{
+                border: 1px solid orange;
+                font-weight: 100;
+                text-align: center;
+                padding: 6% 21%;
+                font-size: 2em;
+                font-style: italic;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+            main{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                border: 1px solid navy;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 3;
+                grid-row-end: 4;
             }
             #logo{
                 border: 1px solid red;
-                width: 265px
+                width: 200px;
+                float: right;
+                margin-top: 1.5%;
+                margin-right: 2%;
             }
             img[src="img/loyola_logo.png"] {
                 width: 100%;
@@ -64,9 +97,32 @@
             }
 
             footer {
-                border: 1px solid black;
+                
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 4;
+                grid-row-end: 5;
+                background-color: black;
             }
+            hr{
+                background-color: rgb(148, 0, 0);
+                margin: 0px;
+                height: 6px;
+            }
+            .boxarea{
+                border: 1px solid rgb(0, 0, 0);
+                margin: 10px;
+                padding: 8px;
+                max-width: 310px;
+                flex: 1 0 250px;
+                height: 300px;
 
+            }
+            #info{
+                font-size: .7em;
+                float:left;
+                margin: 1%;
+            }
             
         </style>
         <!--Internal JavaScript-->
@@ -77,18 +133,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,900;1,100&display=swap" rel="stylesheet">
     </head>
     <body><!--Everything that gets visually rendered-->
+        <hr>
         <!--Grid Container-->
         <div id="container">
             <!--Grid Items-->
             <header>
+                <div id="info">Chris Fulton | cfulton@luc.edu | 815.277.9239 | School of Continuing and Professional Studies | Lewis Tower Office 401 </div>
                 <div id="logo"><img src="img/loyola_logo.png" alt="Loyola Logo"></div>
             </header>
             <div id="banner">
-
+                <p>“We do not learn from experience, we learn from reflecting on the experience”</p>
             </div>
-            <main>
-
-
+            
+            <main><!--Main Flex container-->
+                <!--Flex Items-->
+                <section class="boxarea"></section>
+                <section class="boxarea"></section>
+                <section class="boxarea"></section>
             </main>
             <footer>
                 
